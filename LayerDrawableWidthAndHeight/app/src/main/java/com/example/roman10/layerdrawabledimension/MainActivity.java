@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 
   private ImageView imageView;
   private LayerDrawable layerDrawable;
-  private Drawable layerTwo;
+  private Drawable layerOne;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,9 @@ public class MainActivity extends Activity {
   }
 
   private void reset() {
-    Drawable layerOne = new ColorDrawable(0x88FF0000);
-    layerTwo = new ColorDrawable(0x88FFFFFF);
-    Drawable[] layers = { layerOne, layerTwo };
+    Drawable layerTwo = new ColorDrawable(0x88FF0000);
+    layerOne = new ColorDrawable(0x88FFFFFF);
+    Drawable[] layers = { layerOne, layerTwo};
     layerDrawable = new LayerDrawable(layers);
     layerDrawable.setId(0, android.R.id.background);
     imageView.setImageDrawable(layerDrawable);
@@ -59,8 +59,8 @@ public class MainActivity extends Activity {
   }
 
   private void notWorking() {
-    layerTwo = getResources().getDrawable(R.drawable.ic_launcher);
-    layerDrawable.setDrawableByLayerId(android.R.id.background, layerTwo);
+    layerOne = getResources().getDrawable(R.drawable.ic_launcher);
+    layerDrawable.setDrawableByLayerId(android.R.id.background, layerOne);
     // This is no-op if not calling imageView.setImageDrawable(null) first
     imageView.setImageDrawable(layerDrawable);
     Matrix matrix = new Matrix();
