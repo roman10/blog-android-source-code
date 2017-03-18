@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+  android:shape="line">
+
+  <!--angle: The angle for the gradient, in degrees. 0 is left to right, 90 is bottom to top.
+      It must be a multiple of 45. Default is 0.-->
+  <gradient android:type="sweep"
+            android:angle="0"
+            android:startColor="@color/colorGradientStart"
+            android:centerColor="@color/colorGradientCenter"
+            android:endColor="@color/colorGradientEnd"/>
+
+  <stroke android:width="2dp"
+          android:color="@color/colorAccent"
+          android:dashWidth="4dp"
+          android:dashGap="10dp"/>
+
+</shape>
