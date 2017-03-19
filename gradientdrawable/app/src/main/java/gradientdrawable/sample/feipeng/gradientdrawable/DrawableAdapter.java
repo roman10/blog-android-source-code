@@ -61,6 +61,7 @@ public final class DrawableAdapter extends BaseAdapter {
     gridView.setTag(viewHolder);
     viewHolder.textView.setText(strings[position]);
     viewHolder.imageView.setImageResource(drawableResIds[position]);
+//    viewHolder.imageView.setImageResource(R.mipmap.ic_launcher);
     // For line shape, it won't work properly because of the bug:
     // https://code.google.com/p/android/issues/detail?id=29944, so we disable hardware acceleration
     viewHolder.imageView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
